@@ -19,5 +19,5 @@ chmod +x bashai.sh
 ```
 
 You can also add an alias to your ~/.bashrc
-
+```bash
 echo "alias bashai='/path/to/bashai.sh'" >> ~/.bashrc
