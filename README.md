@@ -12,6 +12,12 @@ cd bashai
 chmod +x bashai.sh
 ```
 
+Set the environment variable for your openai token
+```
+echo "export OPENAI_API_TOKEN=<your_token>" >> ~/.bashrc
+```
+
 You can also add an alias to your ~/.bashrc
 ```bash
 echo "alias bashai='/path/to/bashai.sh'" >> ~/.bashrc
+```
