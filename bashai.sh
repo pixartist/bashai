@@ -27,7 +27,7 @@ API_URL="https://api.openai.com/v1/chat/completions"
 DATA=$(jq -n \
     --arg prompt "Provide a bash command to solve the following problem: $QUESTION. The response should be in the form of a single bash command. Do not add additional explanation. The response should work as it is when pasted into the terminal" \
     --arg role "You are a bash script generation assistant." \
-    '{messages: [{role:"system", content:$role}, {role:"user", content:$prompt}], max_tokens: 50, temperature: 0.5, model: "gpt-4"}')
+    '{messages: [{role:"system", content:$role}, {role:"user", content:$prompt}], max_tokens: 600, temperature: 0.5, model: "gpt-4"}')
 
 # Make the API request and extract the text response
 RESPONSE=$(curl -s -X POST "$API_URL" \
