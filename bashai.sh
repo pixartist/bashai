@@ -35,4 +35,5 @@ RESPONSE=$(curl -s -X POST "$API_URL" \
     -H "Authorization: Bearer $API_KEY" \
     -d "$DATA" | jq -r '.choices[0].message.content')
 
-echo $RESPONSE
+printf "%s\n" "$RESPONSE"
+
